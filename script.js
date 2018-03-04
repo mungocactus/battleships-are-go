@@ -1,29 +1,30 @@
-console.log('holly jesus');
+var buttonText = document.getElementById('launch-button');
+var launch = document.querySelector('.circle-bottom');
 
-window.onload = init;
+var launchShips = function () {
+  console.log('boat');
 
-function init() {
-  var addRow = (function() {
-    var divRow = document.getElementById('gameboard');
-    for (var i = 0; i < 10; i++) {
-      var divider = document.createElement('div');
-      divRow.appendChild(divider);
-      divider.setAttribute('id', 'row');
-    }
-
-    var addBoxes = (function() {
-      var divRubbish = document.getElementById('row');
-      for (var i = 0; i < 10; i++) {
-        var rubbish = document.createElement('div');
-        rubbish.setAttribute('class', 'box');
-        divRubbish.appendChild(rubbish);
-      }
-    });
+  launch.addEventListener('click', function () {
+    launch.classList.add('launched');
+    buttonText.innerHTML = "LAUNCHED";
+    console.log('ship');
+    var row = Math.floor(Math.random() * 10) + 1;
+    console.log(row);
+    var column = Math.floor(Math.random() * 10) + 1;
+    console.log(column);
   });
 
-  addRow();
-  addBoxes();
 }
 
+launchShips();
 
-// try prototype next time
+var resetLaunch = function () {
+  var reset = document.querySelector('.reset');
+  reset.addEventListener('click', function () {
+    console.log('steam');
+    launch.classList.remove('launched');
+    buttonText.innerHTML = "LAUNCH";
+  });
+}
+
+resetLaunch();

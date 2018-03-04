@@ -1,0 +1,117 @@
+//variables
+
+$white: #fff;
+$red: #ad4829;
+$red-light: #ccc;
+$grey: #c6c4c4;
+$grey-light: #dddbdb;
+$grey-dark: #7f7e7e;
+$grey-background: #999;
+$green: #40ad41;
+
+// styles
+
+html {
+  font-size: 10px;
+}
+
+body {
+  align-items: center;
+  color: $white;
+  display: flex;
+  font-family: 'Gill Sans', sans-serif;;
+  height: 100vh;
+  justify-content: center;
+}
+
+.gameboard {
+  align-items: center;
+  background: $grey-background;
+  display: flex;
+  flex-direction: column;
+  height: 75rem;
+  justify-content: space-between;
+  width: 75rem;
+}
+
+.result-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.circle {
+  align-items: center;
+  background: $grey;
+  border-radius: 50%;
+  border: 0.3rem solid $white;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  letter-spacing: 0.3rem;
+  margin: 2rem;
+  width: 6rem;
+
+  &.reset {
+    background: $red;
+    border-width: 0.2rem;
+    font-size: 0.5rem;
+    height: 3rem;
+    margin-top: 4rem;
+    cursor: pointer;
+    width: 3rem;
+    text-align: center;
+  }
+}
+
+button {
+  color: $white;
+  cursor: pointer;
+}
+
+.launch-container {
+  .circle-bottom {
+    align-items: center;
+    background: $red;
+    border-radius: 50%;
+    border: 0.3rem solid $white;
+    display: flex;
+    height: 8rem;
+    justify-content: center;
+    letter-spacing: 0.3rem;
+    margin: 2rem 2rem 6rem;
+    padding-left: 1rem;
+    width: 8rem;
+  }
+
+  .launched {
+    background: $green;
+    font-size: 2rem;
+    word-break: break-word;
+
+    p {
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+th {
+  background: $grey-dark;
+  color: $grey-background;
+  font-size: 1.2rem;
+  margin: 0.1rem;
+  width: 3.5rem;
+}
+
+td {
+  background: $grey;
+  color: $grey-light;
+  height: 3.5rem;
+  font-size: 1rem;
+  margin: 0.1rem;
+  cursor: pointer;
+  text-align: center;
+  width: 3.5rem;
+}
